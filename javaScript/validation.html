@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Name<input type="name" id="name">
+    <span id="span1"></span>
+    Email <input type="email" id="email">
+    Password <input type="password" id="password">
+    <span id="span"></span>
+    <button type="submit" onclick="add()">submit</button>
+    <script>
+        function add()
+        {
+            let name=document.getElementById("name").value;
+            let password=document.getElementById("password").value;
+            if(password.length>=8 || password.length<=16){
+              document.getElementById("span").innerHTML="please enter characters between 8-16.";
+            }
+            if(name==""){
+                document.getElementById("span1").innerHTML="Enter this field.";
+            }
+           
+        }
+        </script>
+        </body>
